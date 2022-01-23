@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Header } from "./Components/Header";
+import * as C from "./App.styles";
+import { Card } from "./Components/Cards/Card";
 
-function App() {
+const App = () => {
+  const [search, setSearch] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <C.Container>
+      <Header setValue={setSearch} value={search} />
+
+      <C.Main>
+        <C.SectionTitle>
+          <div className="titleLine"></div>
+          <h2 id="sectionTitle">All fruits</h2>
+
+          <div className="titleLine"></div>
+        </C.SectionTitle>
+        <C.CardContent>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </C.CardContent>
+      </C.Main>
+    </C.Container>
   );
-}
+};
 
 export default App;
