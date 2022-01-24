@@ -1,6 +1,10 @@
 import { CardList } from "../Cards/CardList";
-import * as C from "./styles";
+import { Fruit } from "../../types/fruit";
 
+import * as C from "./styles";
+type Props = {
+  item: Fruit;
+};
 export const Cart = () => {
     
   return (

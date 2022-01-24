@@ -4,10 +4,12 @@ export type Fruit = {
   name: string;
   family: string;
   order: string;
+  nutritions:{
+    carbohydrates: number;
+    protein: number;
+    fat: number;
+    calories: number;
+    sugar: number;
 
-  carbohydrates: number;
-  protein: number;
-  fat: number;
-  calories: number;
-  sugar: number;
+  }
 };

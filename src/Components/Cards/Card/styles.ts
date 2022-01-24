@@ -42,6 +42,8 @@ export const Container = styled.div`
       color: #ffffff !important;
       font-weight: bold;
       border: none;
+  cursor: pointer;
+
     }
     #linkCardNutritional {
       margin: 0 0 4% 0;
