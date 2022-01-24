@@ -4,6 +4,7 @@ export const Container = styled.div`
   width: 100%;
   height: auto;
   margin: 0;
+  position: relative;
 `;
 
 export const Main = styled.div`
@@ -48,4 +49,8 @@ export const CardContent = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+
+  @media(max-width:480px){
+    width: 100%;
+  }
 `;

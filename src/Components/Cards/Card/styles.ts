@@ -13,8 +13,8 @@ export const Container = styled.div`
 
   .showCardInfo{
     visibility: visible !important;
-    height: 19.75rem !important;
-    
+    display: block !important;
+    animation: typewriter 0.3s forwards    
 
   }
   .imgWrapper {
@@ -80,10 +80,11 @@ export const Container = styled.div`
     width: 14.688rem;
     height: 0;
     visibility: hidden;
+    display: none;
     bottom: 0;
     z-index: 6;
 
-    background: #f1dde1;
+    background: #f9f9f9;
     transition: ease-in 0.5s;
 
 
@@ -123,4 +124,28 @@ export const Container = styled.div`
       padding: 0 0 0 4%;
     }
   }
+@media(max-width:480px) {
+  width: 17.688rem;
+  .CardNutritional{
+  width: 17.688rem;
+
+  }
+}
+  @keyframes typewriter {
+  from {
+    height: 0px;
+  }
+  25% {
+    height: 25%;
+  }
+  50% {
+    height: 50%;
+  }
+  75% {
+    height: 75%;
+  }
+  to {
+    height: 100%;
+  }
+}
 `;

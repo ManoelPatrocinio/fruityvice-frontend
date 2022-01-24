@@ -1,31 +1,36 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import * as C from "./styles";
 import { Fruit } from "../../../types/fruit";
 import prodImg from "../../../assets/img/cherry.png";
 
 type Props = {
   item: Fruit;
+  addProdOnCard?:any;
+  ProdOnCard:Fruit[]
 };
 
 
-export const Card = ({item}:Props) => {
+export const Card = ({item,addProdOnCard,ProdOnCard}:Props) => {
   const [classShowCart, setClassShowCart] = useState("");
-  const [cartId, setCartId] = useState<Fruit[]>([]);
-  const [TotalValue, setTotalValue] = useState<number>();
-
+  let ProdQtd = 0;
   
   const add = (itemAdd:Fruit)=>{
-    const newCartId = cartId
-    newCartId.push(itemAdd)
-    setCartId([...cartId])
+    try {
+      const productAlreadyInCart = ProdOnCard.find( product => product.id === itemAdd.id)
+     
+      if(!productAlreadyInCart){
+        const newCart = ProdOnCard
+        newCart.push(itemAdd)
+        addProdOnCard([...newCart])
+      }else{
+        ProdQtd += 1;
+      }
+     
+    } catch (error) {
+      console.error("erro ao adicionar no card:",error)
+    }
+    
   }
-  useEffect(()=>{
-    let value = 0
-    cartId.map((item)=>{
-        value += item.nutritions.calories
-        setTotalValue(value)
-    })
-  },[cartId])
 
   return (
     <C.Container>

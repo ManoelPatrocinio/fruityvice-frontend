@@ -6,11 +6,12 @@ export const Container = styled.div`
   bottom: 0;
   width: 28.375rem;
   height: calc(100vh - 13vh);
+  min-height: calc(87%);
   border-left: 1px solid #e5e5e5;
   background: #ffffff;
   box-sizing: border-box;
   box-shadow: -4px 1px 8px rgb(0 0 0 / 28%);
-  z-index: 4;
+  z-index: 8;
 
   h1 {
     font-size: 1.3rem;

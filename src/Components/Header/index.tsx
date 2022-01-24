@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import fruityVice_logo from "../../assets/img/fruityVice_logo.svg"
-import { Cart } from "../Cart";
 import * as C from "./styles";
 
 type Props = {
     setValue: any;
     value: string;
+    setCard:any;
+    ShowCartValue:boolean
 };
 
 
-export const Header = ({  setValue, value }:Props) => {
+export const Header = ({  setValue, value,setCard,ShowCartValue }:Props) => {
   const [classShowSearch, setClassShowSearch] = useState("");
-  const [classShowCart, setClassShowCart] = useState(false);
 
   return (
     <C.Container >
@@ -33,9 +33,8 @@ export const Header = ({  setValue, value }:Props) => {
       </C.ItemHeaderContent>
 
       <C.ItemHeaderContent>
-      <i className="fas fa-shopping-cart" onClick={classShowCart === true ? ()=> setClassShowCart(false) : ()=> setClassShowCart(true)}></i>    
+      <i className="fas fa-shopping-cart" onClick={ShowCartValue === true ? ()=> setCard(false) : ()=> setCard(true)}></i>    
       </C.ItemHeaderContent>
-      {classShowCart &&  <Cart/>}
     </C.Container>
     )
 }

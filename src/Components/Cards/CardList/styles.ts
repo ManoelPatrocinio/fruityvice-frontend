@@ -70,6 +70,7 @@ export const Container = styled.div`
       text-align: center;
       font-weight: bold;
       border: none;
+      cursor: pointer;
     }
   }
 `;
