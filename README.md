@@ -52,12 +52,12 @@ Além disto, é bom ter um editor para trabalhar com o código como [VSCode](htt
 
 ### 🎲 Rodando o Projeto
 
+Lembre-se: Clone tanto o front-end, quanto o backend do projeto
+
 ```bash
-# Clone este repositório
-$ git clone <https://github.com/ManoelPatrocinio/ecatalogo>
+
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd ecatalogo
 
 # Instale as dependências iniciais
 $ npm install
